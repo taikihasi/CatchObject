@@ -23,8 +23,18 @@ public:
 	// 表示色の設定
 	void setColor(int color) { m_color = color; }
 
+	// 自身がつかまれているか
+	bool isCatchEnable(Vec2 pos);
+
+	// つかめるかどうか
+	bool isCatchEnable(Vec2 pos);
+
 private:
 	SceneTest* m_pSceneTest;
 	// 表示情報
 	int		m_color;
+
+	// つかみ情報
+	bool m_isCatch; // つかまれているかどうか
+	Vec2 m_catchOffset; // つかんだ位置から中心へのベクトル
 };

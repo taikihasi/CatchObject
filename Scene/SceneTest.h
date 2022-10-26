@@ -2,13 +2,12 @@
 #include "SceneBase.h"
 
 #include "ObjectCircle.h"
+#include <vector>
 
 class SceneTest : public SceneBase
 {
 public:
-	SceneTest() 
-	{
-	}
+	SceneTest();
 	virtual ~SceneTest() {}
 
 
@@ -21,5 +20,5 @@ public:
 private:
 	static const int kObjectNum = 4;
 private:
-	ObjectCircle	m_circle[kObjectNum];
+	std::vector<ObjectCircle> m_circle;
 };
